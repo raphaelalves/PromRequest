@@ -1,12 +1,17 @@
-let promRequest = require('./promRequest.js');
+'use strict';
 let http = require('http');
 
-const server = http.createServer((req, res) => {	
-	promRequest.get('www.google.com.br').then((response) => {
-		console.log(response);
-	}).catch((error) => {
-		console.log(error);
-	});
+const server = http.createServer((req, res) => {
+
+	const PromRequest = require('./PromRequest.js');
+	var google = new PromRequest('http://google.com.br', { something: 'else' });
+	var pagseguro = new PromRequest('http://pagseguro.com.br', { something: 'else' });
+	google.get('/search')
+		.then((googleResponse) => {
+			pageguro.post('/upload', {
+				data: googleResponse
+			});
+		});
 
 	res.end();
 });
