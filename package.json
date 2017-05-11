@@ -1,0 +1,19 @@
+{
+  "name": "node-request-promise",
+  "version": "1.0.0",
+  "description": "",
+  "main": "promRequest.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raphaelalves/node-request-promise.git"
+  },
+  "author": "Raphael Alves Da Silva <cin_rsilva@uolinc.com>",
+  "license": "WTFPL",
+  "bugs": {
+    "url": "https://github.com/raphaelalves/node-request-promise/issues"
+  },
+  "homepage": "https://github.com/raphaelalves/node-request-promise#readme"
+}
