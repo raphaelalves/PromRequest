@@ -2,7 +2,7 @@
   "name": "node-request-promise",
   "version": "2.0.0",
   "description": "",
-  "main": "promRequest.js",
+  "main": "entry.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

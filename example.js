@@ -2,7 +2,7 @@
 const http = require('http');
 
 const server = http.createServer((req, res) => {
-	const PromRequest = require('./PromRequest.js');
+	const PromRequest = require('./entry.js');
 	const exampleUrl = new PromRequest('http://google.com.br', { something: 'custom1' });
 	const anotherExampleUrl = new PromRequest('http://jovemnerd.com.br', { headers: 'custom2' });
 	exampleUrl.post('/search', { data: 'custom3' })
