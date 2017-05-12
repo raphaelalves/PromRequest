@@ -6,7 +6,7 @@ This project was made to help those who want to use [promises](https://developer
 The [Node HTTP Request](https://nodejs.org/api/http.html) native API is quite unfriendly considering our project most times,need multiples requests to be queued, this sometimes lead us to a bad habit and a self-destructive/hard to maintain [callback hell](callbackhell.com).
 
 ## Who?
-The project was developed by me [Raphael](https://github.com/raphaelalves), between inspiring talks with [Igor](https://github.com/igor9silva). The intent of the project is for study purposes, but feel free to use it wherever you want.
+The project was developed by me, [Raphael](https://github.com/raphaelalves), between inspiring talks with [Igor](https://github.com/igor9silva). The intent of the project is for study purposes, but feel free to use it wherever you want.
 
 --------------------------------------------------------------------------------------------------------------------------------
 
