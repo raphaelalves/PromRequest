@@ -13,5 +13,8 @@ The project was developed by me [Raphael](https://github.com/raphaelalves), betw
 ## Installing
 `npm install prom-request`
 
+## API
+You can find the list of functions and parameters [here](docs/API_REFERENCE.md).
+
 ## Usage
-You can find some usage examples [here](EXAMPLE.MD).
+You can find some usage examples [here](docs/EXAMPLE.md).

@@ -15,22 +15,27 @@ function removeProtocolFromURL(url) {
 	return url.replace(/https?:\/\//, '');
 }
 
-function doRequest(requestSettings, pathname) {
+function doRequest(requestSettings, pathname, dataToBeSent) {
 	// Define which library will be used to send the request
 	const httpLibrary = isHttps(requestSettings.hostname) ? require('https') : require('http');
+
 	// Remove the URL protocol
 	requestSettings.hostname = removeProtocolFromURL(requestSettings.hostname);
 	// Add a path to be used along the main url
 	requestSettings.path = pathname;
 
 	return new Promise((resolve, reject) => {
-		httpLibrary.request(requestSettings, (res) => {
+		const myRequest = httpLibrary.request(requestSettings, (res) => {
 			let responseData = [];
+
 			// Determine which encoding will be used on the request
 			requestSettings.responseEncode ? res.setEncoding(requestSettings.responseEncode) : res.setEncoding('utf8');
+
 			// Push each chunk of the data inside the array
 			res.on('data', (requestData) => responseData.push(requestData));
+
 			res.on('error', (requestError) => reject(requestError));
+
 			res.on('end', () => {
 				resolve({
 					data: responseData,
@@ -38,7 +43,14 @@ function doRequest(requestSettings, pathname) {
 					statusCode: res.statusCode
 				});
 			});
-		}).end();
+		});
+		// Check if there's data to apply on the request body
+		if (dataToBeSent) {
+			const querystring = require('querystring');
+			myRequest.write(querystring.stringify(dataToBeSent));
+		}
+
+		myRequest.end()
 	});
 }
 
