@@ -1,5 +1,5 @@
 {
-  "name": "node-request-promise",
+  "name": "PromRequest",
   "version": "2.0.1",
   "description": "",
   "main": "entry.js",
@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/raphaelalves/node-request-promise.git"
   },
-  "author": "Raphael Alves Da Silva <cin_rsilva@uolinc.com>",
+  "author": "Raphael Alves Da Silva <raphael.alves.silva93@gmail.com>",
   "license": "WTFPL",
   "bugs": {
     "url": "https://github.com/raphaelalves/node-request-promise/issues"
